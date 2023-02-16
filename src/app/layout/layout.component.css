@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.drawer-container {
+  flex-grow: 1;
+  width: 100%;
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+}
+
+.sidenav {
+  min-width: 220px;
+}
+
+.content {
+  height: 100%;
+}

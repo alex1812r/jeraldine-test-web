@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <button 
+      mat-icon-button
+      (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a routerLink="/" style="text-decoration: none; color: inherit">Test App</a>
+  </mat-toolbar>
+  
+  <mat-drawer-container autosize class="drawer-container">
+    <mat-drawer #drawer mode="side" opened class="sidenav">
+      <mat-nav-list role="navigation">
+        <a
+          *ngFor="let route of routes"
+          mat-list-item   
+          [routerLink]="route.path">
+          <mat-icon *ngIf="route.icon" matListItemIcon>{{ route.icon }}</mat-icon>
+          <div matListItemTitle>{{ route.name }}</div>
+        </a>
+      </mat-nav-list>
+    </mat-drawer>
+  
+    <main class="content">
+      <router-outlet *ngIf="true"></router-outlet>
+    </main>
+  </mat-drawer-container>
+</div>

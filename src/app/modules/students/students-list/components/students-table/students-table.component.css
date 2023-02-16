@@ -1,0 +1,48 @@
+.table-container {
+  height: px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+tr.element-row:not(.expanded-row):hover {
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+tr.element-row:not(.expanded-row):active {
+  background: #efefef;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+}
+
+.element-detail {
+  overflow: hidden;
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+.column-expand {
+  width: 50px;
+}
+
+.grade-red {
+  color: red;
+}
+
+.grade-yellow {
+  color: rgb(255, 230, 0);
+}
+
+.grade-green {
+  color: rgb(88, 238, 88);
+}
